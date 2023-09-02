@@ -13,11 +13,20 @@ public class BuclesTest2 {
 
         int numero;
 
-        numero = Integer.parseInt(JOptionPane.showInputDialog("Digite un numero"));
+        do{
 
-        while (numero < 1 || numero > -1){
-            JOptionPane.showMessageDialog(null, "El numero que ha ingresado es positivo");
-        }
+            numero = Integer.parseInt(JOptionPane.showInputDialog("Digite un numero"));
+
+            if(numero > 0){
+                JOptionPane.showMessageDialog(null, "El numero depositado es positivo");
+            }else if(numero < 0){
+                JOptionPane.showMessageDialog(null, "El numero depositado es negativo");
+            }else{
+                JOptionPane.showMessageDialog(null, "El numero depositado es 0 el programa se detendra");
+            }
+
+
+        }while(numero != 0);
 
     }
 
